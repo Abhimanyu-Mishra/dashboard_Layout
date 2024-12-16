@@ -1,0 +1,21 @@
+.main_div_arrange {
+  display: grid;
+  grid-template-columns: 68% 32%; /* Set 60% for the first column, 40% for the second */
+  gap: 1rem; /* Space between components */
+  width: 98%; /* Ensure the container spans full width */
+}
+
+@media screen and (max-width: 868px) {
+  /* Tablet view: Maintain the 60%-40% ratio */
+  .main_div_arrange {
+    grid-template-columns: 50% 50%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  /* Mobile view: Stack components */
+  .main_div_arrange {
+    grid-template-columns: 1fr; /* Full width for each component */
+    gap: 1rem; /* Maintain spacing */
+  }
+}
